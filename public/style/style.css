@@ -1,0 +1,139 @@
+:root {
+    --color-brand--1: #ffb545;
+    --color-brand--2: #7fd857;
+    --color-brand--3: #ff5c5c;
+    --color-brand--4: #878787;
+    --color-brand--5: #2781ff;
+
+    --color-dark--1: #2d3439;
+    --color-dark--2: #42484d;
+    --color-light--1: #aaa;
+    --color-light--2: #ececec;
+    --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--color-light--2);
+    font-weight: 400;
+    line-height: 1.6;
+    height: 100vh;
+    overscroll-behavior-y: none;
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    height: 70px;
+    background-color: var(--color-dark--1);
+    color: var(--color-light--2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.separator {
+    height: 5px;
+    background-color: var(--color-brand--2);
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    background-color: var(--color-dark--1);
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar h1 {
+    text-align: center;
+    color: var(--color-light--2);
+}
+
+.nodes {
+    list-style: none;
+    height: 77vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* ensures nodes take full width */
+}
+
+.nodes::-webkit-scrollbar {
+    width: 0;
+}
+
+.node {
+    background-color: var(--color-dark--2);
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 1rem;
+    /* adds spacing between nodes */
+    padding: 1.5rem 1.2rem;
+    border-radius: 8px;
+    /* optional: rounded edges */
+
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+/* MAP */
+#map-container {
+    height: 100%;
+    /* 👈 This is the key! */
+    width: 100%;
+    flex: 1;
+    display: flex;
+}
+
+#map {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-color: var(--color-light--1);
+}
+
+/* style.css */
+/* @import url("sidebar.css");
+@import url("header.css");
+@import url("map.css"); */
